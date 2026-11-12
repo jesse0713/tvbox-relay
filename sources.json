@@ -1,0 +1,85 @@
+{
+    "schema":  1,
+    "note":  "TVBox 视频源/直播源清单。active 为主用编号，脚本检测失败时会自动改指向可用备源；中转每次请求都重读本文件，改完不用重启。",
+    "updated":  "2026-11-12",
+    "target":  {
+                   "device":  "小米电视 / Android TV（任意 TVBox 兼容客户端均可）",
+                   "app":  "TVBox q215613905 (java 通用版)",
+                   "network":  "国内家庭宽带直连，raw.githubusercontent.com 与 cdn.jsdelivr.net 常不可达，故上游统一走国内可达的加速镜像"
+               },
+    "thresholds":  {
+                       "video_sites_min":  40,
+                       "video_cms_alive_min":  0.5,
+                       "live_alive_min":  0.5
+                   },
+    "video":  {
+                  "active":  "v3",
+                  "items":  [
+                                {
+                                    "id":  "v3",
+                                    "role":  "主",
+                                    "name":  "七星 qist/tvbox · jsm (备用镜像)",
+                                    "url":  "https://gh-proxy.com/https://raw.githubusercontent.com/qist/tvbox/master/jsm.json",
+                                    "repo":  "qist/tvbox",
+                                    "stars":  12449,
+                                    "pushed":  "2026-10-30",
+                                    "host":  "gh-proxy.com 加速镜像"
+                                },
+                                {
+                                    "id":  "v1",
+                                    "role":  "备1",
+                                    "name":  "七星 qist/tvbox · jsm",
+                                    "url":  "https://qist.wyfc.qzz.io/jsm.json",
+                                    "repo":  "qist/tvbox",
+                                    "stars":  12449,
+                                    "pushed":  "2026-10-30",
+                                    "host":  "作者自建国内镜像 (qzz.io)"
+                                },
+                                {
+                                    "id":  "v2",
+                                    "role":  "备2",
+                                    "name":  "cluntop/tvbox · box",
+                                    "url":  "https://ghproxy.net/https://raw.githubusercontent.com/cluntop/tvbox/main/box.json",
+                                    "repo":  "cluntop/tvbox",
+                                    "stars":  628,
+                                    "pushed":  "2026-10-30",
+                                    "host":  "ghfast.top 加速镜像"
+                                }
+                            ]
+              },
+    "live":  {
+                 "active":  "l1",
+                 "items":  [
+                               {
+                                   "id":  "l1",
+                                   "role":  "主",
+                                   "name":  "best-fan/iptv-sources · cn_all_status",
+                                   "url":  "https://ghproxy.net/https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_all_status.m3u8",
+                                   "repo":  "best-fan/iptv-sources",
+                                   "stars":  941,
+                                   "pushed":  "2026-10-30",
+                                   "host":  "ghfast.top 加速镜像"
+                               },
+                               {
+                                   "id":  "l2",
+                                   "role":  "备1",
+                                   "name":  "best-fan/iptv-sources · cn_province_status",
+                                   "url":  "https://ghproxy.net/https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_province_status.m3u8",
+                                   "repo":  "best-fan/iptv-sources",
+                                   "stars":  941,
+                                   "pushed":  "2026-10-30",
+                                   "host":  "ghfast.top 加速镜像"
+                               },
+                               {
+                                   "id":  "l3",
+                                   "role":  "备2",
+                                   "name":  "best-fan/iptv-sources · cn_cctv_status",
+                                   "url":  "https://gh-proxy.com/https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_cctv_status.m3u8",
+                                   "repo":  "best-fan/iptv-sources",
+                                   "stars":  941,
+                                   "pushed":  "2026-10-30",
+                                   "host":  "gh-proxy.com 加速镜像"
+                               }
+                           ]
+             }
+}

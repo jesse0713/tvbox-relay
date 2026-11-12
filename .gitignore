@@ -1,0 +1,28 @@
+# ---- 运行时产物（每台机器自己生成，不入库） ----
+relay/cache/
+relay/vodcache/
+relay/*.log
+relay/*.log.*
+
+# ---- 自动生成的播放列表与体检结果 ----
+relay/live*.m3u
+relay/live*.m3u8
+relay/*-report.json
+relay/vod-rank.json
+report.txt
+status.json
+
+# ---- 上游原始配置、安装包：体积大且属第三方内容 ----
+raw/
+apk/
+
+# ---- 通用 ----
+__pycache__/
+*.pyc
+*.pyo
+*.tmp
+*.bak
+Thumbs.db
+desktop.ini
+.DS_Store
+.venv/
